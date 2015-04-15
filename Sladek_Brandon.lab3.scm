@@ -52,15 +52,15 @@
 ; End remover
 
 ; Return the intersection of two sets
-(define (inter lst1 lst2)
+(define (intersect lst1 lst2)
   (cond
     [(null? lst1) '()]
     ; If the first element of lst1 is in lst2
     [(member? (car lst1) lst2)
      ; Concatenate that element with the intersection set
-     (cons (car lst1) (inter (cdr lst1) lst2))]
+     (cons (car lst1) (intersect (cdr lst1) lst2))]
     ; Otherwise, check out the rest of the list
-    [else (inter (cdr lst1) lst2) ]))
+    [else (intersect (cdr lst1) lst2) ]))
 ; End inter
 
 ; End file

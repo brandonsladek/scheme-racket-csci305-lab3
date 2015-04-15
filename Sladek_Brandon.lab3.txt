@@ -1,0 +1,54 @@
+Brandon Sladek
+CSCI 305
+Lab 3 (Scheme/Racket)
+
+1. ‘(4 2 5 2 6 10)
+
+2. This function iterates through the list and increments each value by one. Technically, this function splits off the first value of the list through each recursive call, increments the value by one, and concatenates it to the front of the rest of the list. In this way, the function goes through each element in the list and increments it by one, eventually concatenating all of the incremented values together to form a final list in which each original element is incremented by one. 
+
+3. This line is an if statement where the condition is whether or not the list argument is null.
+
+4. The single quote in ‘() takes one parameter and returns the parameter without evaluation. In other words, ’() tells the computer to simply return the empty list (). The quote is used to avoid parameter evaluation when it is not appropriate.
+
+5. This line is the recursive line in the f function. It takes two arguments and concatenates them. The first argument is the sum of 1 and the first element in the list “lst” that was passed as the larger function argument. The second argument in this line is the recursive call to function f with the rest of the list (after the first element) passed as the argument.
+
+6. 
+	
+INPUT:	3 1 4 1 5 9
+		4	1 4 1 5 9
+			2	4 1 5 9
+				5	1 5 9
+					2	5 9
+						6	9
+							10 ()
+								()
+							10
+						6 10
+					2 6 10
+				5 2 6 10
+			2 5 2 6 10
+		4 2 5 2 6 10
+OUTPUT:	4 2 5 2 6 10
+
+7. #f
+
+8. My member? function uses tail recursion because the recursive call is the else statement.
+
+9. #f
+
+10. Tail recursion refers to when a procedure recursively calls itself in the last line of the procedure. It can be beneficial to write tail recursing functions because tail recursion is often easy to handle in language implementations. It is easy to implement because tail calls can be implemented without adding a new stack frame to the call stack. This is because the current stack frame becomes useless when the recursive call is made, and the frame of the recursive call can simply replace the current stack frame and begin execution immediately.
+
+11. ‘(green eggs and ham)
+
+12. ‘(and macaroni)
+
+13. I really like how easy scheme makes it to recursively perform operations on lists. Maybe it’s just the syntax that makes it easier to understand, considering I’ve never written in a functional language before, but I definitely am more comfortable with recursion now after doing this lab.
+
+14. I don’t like how Scheme uses Polish Prefix notation. I know that Polish notation makes language implementation easier by removing potential ambiguity in the grammar, but damn it also makes it more difficult to write and read programs because it’s so unintuitive.
+
+15. I did enjoy this lab. It definitely was a really unique programming experience since I’ve never written in a functional language before, and definitely haven’t focused this hard on recursion before either. I liked how different the language was compared to other languages like Java and C. However, I am definitely way more comfortable with object-oriented and imperative languages, and the functional paradigm definitely seems much more confusing at the moment.
+
+16. I spent about 5 hours on this lab.
+
+17. I will probably use Scheme again for projects in which I have to process large lists of data since the language makes it so easy to process lists recursively and thus write less code.
+
