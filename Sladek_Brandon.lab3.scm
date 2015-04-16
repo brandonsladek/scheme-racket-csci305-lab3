@@ -63,5 +63,27 @@
     [else (intersect (cdr lst1) lst2) ]))
 ; End inter
 
+; Check whether element is atom 
+(define (atom? x)
+  (not (or (pair? x) (null? x))))
+; End atom?
+
+; Return union of two lists without embedded lists
+(define (flatten lst1 lst2)
+  (remover (append (flat lst1) (flat lst2))))
+; End flatten
+
+; Remove embedded lists
+(define (flat lst)
+  (cond
+    [(null? lst) '()]
+    ; If first element of list is an atom
+    [(atom? (car lst)) 
+     ; Concatenate it with the rest of the atoms in the list
+     (cons (car lst) (flat (cdr lst)))]
+    ; Otherwise, check the rest of the list
+    [else (flat (cdr lst))]))
+; End flat
+
 ; End file
-  
+ 
