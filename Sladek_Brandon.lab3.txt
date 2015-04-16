@@ -52,3 +52,9 @@ OUTPUT:	4 2 5 2 6 10
 
 17. I will probably use Scheme again for projects in which I have to process large lists of data since the language makes it so easy to process lists recursively and thus write less code.
 
+EXTRA CREDIT QUESTIONS
+
+EC1. ‘(1 5 8)
+
+EC2. To flatten two lists, I first had to make a function atom? that returns true if the parameter is an atom (and not a list). This atom? function just checks whether the parameter is a pair? or null? and if it’s neither of those then it’s an atom. My actual flatten function is pretty short because it utilizes another function named flat. The flatten function simply removes the duplicates from the concatenated lists (after the flat function removes all embedded lists in both lists). My flat function is a recursive function that checks whether the first element of the parameter list is an atom. If it is, the function concatenates the atom element with a recursive call to the rest of the list. If the first element is not an atom, the function essentially ignores the element and recursively calls itself on the rest of the list.
+
